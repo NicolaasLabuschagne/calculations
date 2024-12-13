@@ -1,0 +1,226 @@
+/* General Reset and Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #f0f0f0; /* Light text */
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #121212;
+  width: 250px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Profile Icon Styling */
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #d49f25; /* Gold color for icon placeholder */
+  border-radius: 50%; /* Circular shape */
+  margin-bottom: 30px;
+  border: 3px solid #ecf0f1;
+}
+
+/* Navigation Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.menu-item {
+  background-color: #1f1f1f;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.menu-item:hover {
+  background-color: #181715;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Active State */
+.menu-item:active {
+  background-color: #d49f25;
+  color: #121212;
+}
+
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #181715; /* Darker shade for content background */
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Header Styling */
+header {
+  background-color: #d49f25; /* Gold header */
+  color: #121212; /* Dark text for contrast */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* Cards Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Card Styling */
+.card {
+  background-color: #1f1f1f; /* Dark card background */
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  flex: 1 1 calc(33.33% - 20px);
+  min-width: 250px;
+}
+
+.card h3 {
+  color: #f0f0f0;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.card p {
+  color: #d49f25;
+  font-size: 1.1em;
+}
+
+/* Year Control Buttons */
+.year-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.year-control button {
+  background-color: #d49f25; /* Gold buttons */
+  color: #121212; /* Dark text for contrast */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.year-control button:hover {
+  background-color: #a57b19; /* Darker gold on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+#currentYear {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+/* Chart Styling */
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
+.input-pair {
+  display: flex;
+  gap: 1.5em; /* Space between inputs */
+  justify-content: space-between;
+}
+/* Each individual input block */
+.input-pair div {
+  flex: 1; /* Each label-input pair takes equal width */
+  min-width: 150px; /* Prevents fields from shrinking too much */
+}
+input {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #333;
+  color: #f0f0f0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6); /* Card-like pop effect */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+input:focus {
+  transform: translateY(-3px); /* Lift effect on focus */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+  outline: none;
+}
+.menu-item1 {
+  text-align: center;
+  background-color: #d49f25;
+  color: #121212;
+  padding: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  display: block; /* Make it a block-level element */
+  text-decoration: none;
+}
+
+.menu-item1:hover {
+  background-color: #a57b19;
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
